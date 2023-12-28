@@ -21,7 +21,7 @@ public class Delivery {
     private string? dismissalKind;
     private string? fielder;
 
-    public string? getMatchId() {
+    public string? GetMatchId() {
         return this.matchId;
     }
 
@@ -29,7 +29,7 @@ public class Delivery {
         this.matchId = matchId;
     }
 
-    public string? getInning() {
+    public string? GetInning() {
         return this.inning;
     }
 
@@ -37,7 +37,7 @@ public class Delivery {
         this.inning = inning;
     }
 
-    public string? getBatingTeam() {
+    public string? GetBatingTeam() {
         return this.batingTeam;
     }
 
@@ -45,7 +45,7 @@ public class Delivery {
         this.batingTeam = batingTeam;
     }
 
-    public string? getBowlingTeam() {
+    public string? GetBowlingTeam() {
         return this.bowlingTeam;
     }
 
@@ -53,7 +53,7 @@ public class Delivery {
         this.bowlingTeam = bowlingTeam;
     }
 
-    public string? getOver() {
+    public string? GetOver() {
         return this.over;
     }
 
@@ -61,7 +61,7 @@ public class Delivery {
         this.over = over;
     }
 
-    public string? getBall() {
+    public string? GetBall() {
         return this.ball;
     }
 
@@ -69,7 +69,7 @@ public class Delivery {
         this.ball = ball;
     }
 
-    public string? getBatsman() {
+    public string? GetBatsman() {
         return this.batsman;
     }
 
@@ -77,7 +77,7 @@ public class Delivery {
         this.batsman = batsman;
     }
 
-    public string? getNonStriker() {
+    public string? GetNonStriker() {
         return this.nonStriker;
     }
 
@@ -85,7 +85,7 @@ public class Delivery {
         this.nonStriker = nonStriker;
     }
 
-    public string? getBowler() {
+    public string? GetBowler() {
         return this.bowler;
     }
 
@@ -93,7 +93,7 @@ public class Delivery {
         this.bowler = bowler;
     }
 
-    public string? getIsSuperOver() {
+    public string? GetIsSuperOver() {
         return this.isSuperOver;
     }
 
@@ -101,7 +101,7 @@ public class Delivery {
         this.isSuperOver = isSuperOver;
     }
 
-    public string? getWideRuns() {
+    public string? GetWideRuns() {
         return this.wideRuns;
     }
 
@@ -109,7 +109,7 @@ public class Delivery {
         this.wideRuns = wideRuns;
     }
 
-    public string? getByeRuns() {
+    public string? GetByeRuns() {
         return this.byeRuns;
     }
 
@@ -117,7 +117,7 @@ public class Delivery {
         this.byeRuns = byeRuns;
     }
 
-    public string? getLegByRuns() {
+    public string? GetLegByRuns() {
         return this.legByRuns;
     }
 
@@ -125,7 +125,7 @@ public class Delivery {
         this.legByRuns = legByRuns;
     }
 
-    public string? getNoBallRuns() {
+    public string? GetNoBallRuns() {
         return this.noBallRuns;
     }
 
@@ -133,7 +133,7 @@ public class Delivery {
         this.noBallRuns = noBallRuns;
     }
 
-    public string? getPenaltyRuns() {
+    public string? GetPenaltyRuns() {
         return this.penaltyRuns;
     }
 
@@ -141,7 +141,7 @@ public class Delivery {
         this.penaltyRuns = penaltyRuns;
     }
 
-    public string? getBatsmanRuns() {
+    public string? GetBatsmanRuns() {
         return this.batsmanRuns;
     }
 
@@ -149,7 +149,7 @@ public class Delivery {
         this.batsmanRuns = batsmanRuns;
     }
 
-    public string? getExtraRuns() {
+    public string? GetExtraRuns() {
         return this.extraRuns;
     }
 
@@ -157,7 +157,7 @@ public class Delivery {
         this.extraRuns = extraRuns;
     }
 
-    public string? getTotalRuns() {
+    public string? GetTotalRuns() {
         return this.totalRuns;
     }
 
@@ -165,7 +165,7 @@ public class Delivery {
         this.totalRuns = totalRuns;
     }
 
-    public string? getPlayerDismissed() {
+    public string? GetPlayerDismissed() {
         return this.playerDismissed;
     }
 
@@ -173,7 +173,7 @@ public class Delivery {
         this.playerDismissed = playerDismissed;
     }
 
-    public string? getDismissalKind() {
+    public string? GetDismissalKind() {
         return this.dismissalKind;
     }
 
@@ -181,7 +181,7 @@ public class Delivery {
         this.dismissalKind = dismissalKind;
     }
 
-    public string? getFielder() {
+    public string? GetFielder() {
         return this.fielder;
     }
 

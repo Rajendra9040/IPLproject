@@ -132,16 +132,72 @@ public class IPL {
     }
     
     public static Dictionary<string, int> GetMatchPlayedPerYear(List<Match> matches) {
-        Dictionary<string, int> matchPlayedPerYear = new Dictionary<string, int>();
+        Dictionary<string, int> matchPlayedPerYear = [];
 
         string? session;
 
         foreach (Match match in matches) {
             session = match.GetSession();
-            matchPlayedPerYear[session] = matchPlayedPerYear.GetValueOrDefault(session, 0) + 1;
+            if (session != null) {
+                matchPlayedPerYear[session] = matchPlayedPerYear.GetValueOrDefault(session, 0) + 1;
+            }
         }
 
         return matchPlayedPerYear;
+    }
+
+    public static Dictionary<string, int> GetMatchesWonOFAllTeams(List<Match> matches) {
+        Dictionary<string, int> matchesWonOFAllTeams = [];
+
+        foreach(Match match in matches) {
+            string? winner = match.GetWinner();
+            
+            if(winner != null) {
+                matchesWonOFAllTeams[winner] = matchesWonOFAllTeams.GetValueOrDefault(winner, 0)+1;
+            }
+        }
+        
+        return matchesWonOFAllTeams;
+    }
+
+     public static Dictionary<string, int> GetExtraRunConcededOfTeams(string year, List<Match> matches, List<Delivery> deliveries) {
+        Dictionary<string, int> extraRunConcededOfTeams = [];
+        HashSet<string?> matchIdsOfCurrentYear = [];
+
+        foreach (Match match in matches) {
+            if (match.GetSession() == year) {
+                matchIdsOfCurrentYear.Add(match.GetId());
+            }
+        }
+
+        if (matchIdsOfCurrentYear.Count == 0) {
+            throw new MatchNotPlayedException("Match not played this year");
+        }
+        int extraRunOfCurrentDelivery;
+
+        foreach (Delivery delivery in deliveries){
+            if (matchIdsOfCurrentYear.Contains(delivery.GetMatchId())){
+                string? bowlingTeam = delivery.GetBowlingTeam();
+            
+                extraRunOfCurrentDelivery = int.Parse(delivery.GetExtraRuns());
+
+                if (bowlingTeam != null && extraRunConcededOfTeams.ContainsKey(bowlingTeam)){
+                    extraRunConcededOfTeams[bowlingTeam] = extraRunConcededOfTeams[bowlingTeam]+extraRunOfCurrentDelivery;
+                } else {
+                    extraRunConcededOfTeams.Add(bowlingTeam, extraRunOfCurrentDelivery);
+                }
+            }
+        }
+
+        return extraRunConcededOfTeams;
+    }
+
+}
+
+
+class MatchNotPlayedException : Exception {
+    public MatchNotPlayedException(string message) : base(message) {
+
     }
 }
 
