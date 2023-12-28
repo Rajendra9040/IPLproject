@@ -1,0 +1,17 @@
+D:\MountBlue\DOTNET\bin\Debug\net8.0\DOTNET.exe
+D:\MountBlue\DOTNET\bin\Debug\net8.0\DOTNET.deps.json
+D:\MountBlue\DOTNET\bin\Debug\net8.0\DOTNET.runtimeconfig.json
+D:\MountBlue\DOTNET\bin\Debug\net8.0\DOTNET.dll
+D:\MountBlue\DOTNET\bin\Debug\net8.0\DOTNET.pdb
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.GeneratedMSBuildEditorConfig.editorconfig
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.AssemblyInfoInputs.cache
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.AssemblyInfo.cs
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.csproj.CoreCompileInputs.cache
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.dll
+D:\MountBlue\DOTNET\obj\Debug\net8.0\refint\DOTNET.dll
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.pdb
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.genruntimeconfig.cache
+D:\MountBlue\DOTNET\obj\Debug\net8.0\ref\DOTNET.dll
+D:\MountBlue\DOTNET\bin\Debug\net8.0\CsvHelper.dll
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.csproj.AssemblyReference.cache
+D:\MountBlue\DOTNET\obj\Debug\net8.0\DOTNET.csproj.CopyComplete

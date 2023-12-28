@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BN3Hqztv6ObFLvNoD4gI5k9HQRIwiKFqNFQgJ/W1WfXK3wmhVcOO9Ba/2NsGhbV2TbVcBteoIuzrWyoSH5qEDg==",
+  "success": true,
+  "projectFilePath": "D:\\MountBlue\\DOTNET\\DOTNET.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rajum\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
