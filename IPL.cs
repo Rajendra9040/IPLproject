@@ -54,26 +54,23 @@ public class IPL {
                 while ((line = reader.ReadLine()) != null) {
                     string[] splitLine = line.Split(',');
 
-                    Match match = new Match {
-                        id = splitLine[ID],
-                        session = splitLine[SESSION],
-                        city =  splitLine[CITY],
-                        date = splitLine[DATE],
-                        team1 = splitLine[TEAM1],
-                        team2 = splitLine[TEAM2],
-                        tossWinner = splitLine[TOSS_WINNER],
-                        tossDecision = splitLine[TOSS_DECISION],
-                        result = splitLine[RESULT],
-                        dlApplied = splitLine[DL_APPLIED],
-                        winner = splitLine[WINNER],
-                        winByRuns = splitLine[WIN_BY_RUNS],
-                        winByWickets = splitLine[WIN_BY_WICKETS],
-                        playerOfMatch = splitLine[PLAYER_OF_MATCH],
-                        venue = splitLine[VENUE],
-                        umpire1 = splitLine[UMPIRE1],
-                        umpire2 = splitLine[UMPIRE2],
-                        umpire3 = splitLine[UMPIRE3]
-                    };
+                    Match match = new Match();
+
+                    match.SetId(splitLine[ID]);
+                    match.SetSession(splitLine[SESSION]);
+                    match.SetCity(splitLine[CITY]);
+                    match.SetDate(splitLine[DATE]);
+                    match.SetTeam1(splitLine[TEAM1]);
+                    match.SetTeam2(splitLine[TEAM2]);
+                    match.SetTossWinner(splitLine[TOSS_WINNER]);
+                    match.SetTossDecision(splitLine[TOSS_DECISION]);
+                    match.SetResult(splitLine[RESULT]);
+                    match.SetDlApplied(splitLine[DL_APPLIED]);
+                    match.SetWinner(splitLine[WINNER]);
+                    match.SetWinByRuns(splitLine[WIN_BY_RUNS]);
+                    match.SetWinByWickets(splitLine[WIN_BY_WICKETS]);
+                    match.SetPlayerOfMatch(splitLine[PLAYER_OF_MATCH]);
+                    match.SetVenue(splitLine[VENUE]);
 
                     matches.Add(match);
                 }
@@ -100,29 +97,26 @@ public class IPL {
                 while ((line = reader.ReadLine()) != null) {
                     splitLine = line.Split(",");
 
-                    Delivery delivery = new Delivery {
-                        matchId = splitLine[MATCH_ID],
-                        inning = splitLine[INNING],
-                        batingTeam = splitLine[BATTING_TEAM],
-                        bowlingTeam = splitLine[BOWLING_TEAM],
-                        over = splitLine[OVER],
-                        ball = splitLine[BALL],
-                        batsman = splitLine[BATSMAN],
-                        nonStriker = splitLine[NON_STRIKER],
-                        bowler = splitLine[BOWLER],
-                        isSuperOver = splitLine[IS_SUPER_OVER],
-                        wideRuns = splitLine[WIDE_RUNS],
-                        byeRuns = splitLine[BYE_RUNS],
-                        legByRuns = splitLine[LEG_BYE_RUNS],
-                        noBallRuns = splitLine[NO_BALL_RUNS],
-                        penaltyRuns = splitLine[PENALTY_RUNS],
-                        batsmanRuns = splitLine[BATSMAN_RUNS],
-                        extraRuns = splitLine[EXTRA_RUNS],
-                        totalRuns = splitLine[TOTAL_RUNS],
-                        playerDismissed = splitLine[PLAYER_DISMISSED],
-                        dismissalKind = splitLine[DISMISSAL_KIND],
-                        fielder = splitLine[FIELDER]
-                    };
+                    Delivery delivery = new Delivery();
+
+                    delivery.SetMatchId(splitLine[MATCH_ID]);
+                    delivery.SetInning(splitLine[INNING]);
+                    delivery.SetBatingTeam(splitLine[BATTING_TEAM]);
+                    delivery.SetBowlingTeam(splitLine[BOWLING_TEAM]);
+                    delivery.SetOver(splitLine[OVER]);
+                    delivery.SetBall(splitLine[BALL]);
+                    delivery.SetBatsman(splitLine[BATSMAN]);
+                    delivery.SetNonStriker(splitLine[NON_STRIKER]);
+                    delivery.SetBowler(splitLine[BOWLER]);
+                    delivery.SetIsSuperOver(splitLine[IS_SUPER_OVER]);
+                    delivery.SetWideRuns(splitLine[WIDE_RUNS]);
+                    delivery.SetByeRuns(splitLine[BYE_RUNS]);
+                    delivery.SetLegByRuns(splitLine[LEG_BYE_RUNS]);
+                    delivery.SetNoBallRuns(splitLine[NO_BALL_RUNS]);
+                    delivery.SetPenaltyRuns(splitLine[PENALTY_RUNS]);
+                    delivery.SetBatsmanRuns(splitLine[BATSMAN_RUNS]);
+                    delivery.SetExtraRuns(splitLine[EXTRA_RUNS]);
+                    delivery.SetTotalRuns(splitLine[TOTAL_RUNS]);
 
                     deliveries.Add(delivery);
 
@@ -136,4 +130,18 @@ public class IPL {
 
         return deliveries;
     }
+    
+    public static Dictionary<string, int> GetMatchPlayedPerYear(List<Match> matches) {
+        Dictionary<string, int> matchPlayedPerYear = new Dictionary<string, int>();
+
+        string? session;
+
+        foreach (Match match in matches) {
+            session = match.GetSession();
+            matchPlayedPerYear[session] = matchPlayedPerYear.GetValueOrDefault(session, 0) + 1;
+        }
+
+        return matchPlayedPerYear;
+    }
 }
+
